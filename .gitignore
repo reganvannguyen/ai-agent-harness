@@ -12,3 +12,6 @@ __pycache__/
 env/
 venv/
 ENV/
+.env
+.env.*
+!.env.example
