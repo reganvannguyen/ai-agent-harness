@@ -6,9 +6,17 @@ DATABASE_URL = "postgresql://user:password@db:5432/agent_harness"
 
 engine = create_engine(DATABASE_URL)
 
-sessionLocal = sessionmaker(
+SessionLocal = sessionmaker(
     bind = engine,
     autoflush= False,
     autocommit = False,
 )
 
+def get_db():
+    db = SessionLocal()
+
+    try:
+        yield db
+    finally:
+        db.close()
+        
