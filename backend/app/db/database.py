@@ -1,7 +1,7 @@
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
 
-DATABASE_URL = "postgresql://user:password@db:5432/agent_harness"
+DATABASE_URL = "postgresql+psycopg://postgres:mysecretpassword@localhost:5432/agent_harness"
 
 
 engine = create_engine(DATABASE_URL)

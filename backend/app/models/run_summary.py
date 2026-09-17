@@ -4,7 +4,6 @@ from sqlalchemy.orm import Mapped, mapped_column
 from app.db.base import Base
 
 from datetime import datetime
-from sqlalchemy.dialects.postgresql import JSONB
 
 class RunSummary(Base):
     __tablename__ = "run_summaries"
