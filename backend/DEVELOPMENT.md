@@ -11,6 +11,12 @@ docker compose ps
 
 The database is available at `localhost:5432`.
 
+## Open the PostgreSQL shell
+
+```bash
+docker exec -it agent-harness-db psql -U postgres -d agent_harness
+```
+
 To use the values in `backend/.env` when starting Compose instead:
 
 ```bash
@@ -48,6 +54,12 @@ The backend runs at <http://127.0.0.1:8000>. Interactive API docs are at
 <http://127.0.0.1:8000/docs>.
 
 Stop the backend with `Ctrl+C`.
+
+## Run the test
+
+```bash
+python -m pytest tests -q
+```
 
 ## Startup order
 
