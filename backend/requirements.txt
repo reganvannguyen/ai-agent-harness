@@ -6,3 +6,5 @@ psycopg[binary]
 alembic
 pydantic-settings
 pytest
+alembic
+python-dotenv
