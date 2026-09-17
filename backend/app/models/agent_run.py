@@ -13,5 +13,5 @@ class AgentRun(Base):
     trigger_message_id: Mapped[int] = mapped_column(ForeignKey("messages.id"))
     status: Mapped[str]
     started_at: Mapped[datetime] = mapped_column(DateTime(timezone= True), server_default= func.now())
-    completed_at: Mapped[datetime] = mapped_column(DateTime(timezone= True), server_default= func.now())
+    completed_at: Mapped[datetime] = mapped_column(DateTime(timezone= True), nullable= True)
 

@@ -9,7 +9,7 @@ from sqlalchemy.dialects.postgresql import JSONB
 class RunSummary(Base):
     __tablename__ = "run_summaries"
     id: Mapped[int] = mapped_column(primary_key= True)
-    agen_run_id: Mapped[int] = mapped_column(ForeignKey("agent_runs.id"))
-    summary: Mapped[int]
+    agent_run_id: Mapped[int] = mapped_column(ForeignKey("agent_runs.id"))
+    summary: Mapped[str]
     created_at: Mapped[datetime] = mapped_column(DateTime(timezone= True), server_default= func.now())
     
